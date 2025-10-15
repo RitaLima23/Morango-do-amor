@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprenda a fazer Morango do Amor - Doçura Irresistível</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🍓';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cta-button {
+            background: white;
+            color: #c44569;
+            padding: 18px 50px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            animation: none;
+        }
+
+        .benefits {
+            padding: 80px 20px;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #c44569;
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #fff 0%, #ffebf0 100%);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(196, 69, 105, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(196, 69, 105, 0.2);
+            border-color: #ff6b9d;
+        }
+
+        .benefit-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h3 {
+            color: #c44569;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .marketing-section {
+            background: linear-gradient(135deg, #ffeef3 0%, #fff 100%);
+            padding: 80px 20px;
+        }
+
+        .marketing-techniques {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .technique-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #ff6b9d;
+            transition: all 0.3s ease;
+        }
+
+        .technique-box:hover {
+            transform: translateX(10px);
+            border-left-width: 10px;
+        }
+
+        .technique-box h3 {
+            color: #c44569;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .technique-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .technique-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .technique-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6b9d;
+            font-weight: bold;
+        }
+
+        .social-proof {
+            background: #c44569;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.3em;
+            font-style: italic;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .urgency {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 600px;
+            font-size: 1.2em;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>🍓 Morango do Amor 🍓</h1>
+        <p>A doçura que conquista corações e transforma momentos em memórias inesquecíveis!</p>
+        <button class="cta-button" onclick="scrollToOrder()">Quero Meu Morango Agora!</button>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Por Que Nosso Morango do Amor é Irresistível?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Artesanal & Premium</h3>
+                    <p>Cada morango é cuidadosamente selecionado e coberto com chocolate belga de alta qualidade. Perfeição em cada mordida!</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💝</div>
+                    <h3>Presente Perfeito</h3>
+                    <p>Ideal para aniversários, Dia dos Namorados, pedidos de namoro ou simplesmente para demonstrar carinho.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Preparamos e entregamos no mesmo dia! Frescor e qualidade garantidos direto na sua porta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketing-section">
+        <div class="container">
+            <h2 class="section-title">Técnicas de Marketing Aplicadas Nesta Página</h2>
+            <div class="marketing-techniques">
+                <div class="technique-box">
+                    <h3>📊 Copywriting Persuasivo</h3>
+                    <ul>
+                        <li><strong>Gatilhos Emocionais:</strong> Uso de palavras como "amor", "irresistível", "conquista"</li>
+                        <li><strong>Benefícios > Características:</strong> Foco em como o produto transforma a experiência</li>
+                        <li><strong>Linguagem Sensorial:</strong> Descrições que ativam imaginação e desejo</li>
+                    </ul>
+                </div>
+                
+                <div class="technique-box">
+                    <h3>🎯 Princípios de Conversão</h3>
+                    <ul>
+                        <li><strong>CTA Claro:</strong> Botões com ação direta e visível</li>
+                        <li><strong>Hierarquia Visual:</strong> Design guia o olhar para informações-chave</li>
+                        <li><strong>Prova Social:</strong> Depoimentos reforçam confiança</li>
+                        <li><strong>Escassez/Urgência:</strong> "Entrega no mesmo dia" cria senso de oportunidade</li>
+                    </ul>
+                </div>
+                
+                <div class="technique-box">
+                    <h3>🎨 Design & UX</h3>
+                    <ul>
+                        <li><strong>Cores Estratégicas:</strong> Rosa/vermelho evocam amor e desejo</li>
+                        <li><strong>Animações Sutis:</strong> Aumentam engajamento sem distrair</li>
+                        <li><strong>Responsividade:</strong> Experiência otimizada para mobile</li>
+                        <li><strong>Espaçamento Generoso:</strong> Facilita leitura e reduz fricção</li>
+                    </ul>
+                </div>
+                
+                <div class="technique-box">
+                    <h3>💰 Técnicas de Vendas</h3>
+                    <ul>
+                        <li><strong>Proposta de Valor Clara:</strong> "Premium", "Artesanal", "Belga"</li>
+                        <li><strong>Redução de Risco:</strong> Promessa de qualidade e frescor</li>
+                        <li><strong>Múltiplos CTAs:</strong> Várias oportunidades de conversão</li>
+                        <li><strong>Storytelling:</strong> Narrativa emocional que conecta produto a momentos especiais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">O Que Nossos Clientes Dizem</h2>
+            <div class="testimonial">
+                "Pedi para surpreender minha namorada e foi um sucesso absoluto! Os morangos são lindos, deliciosos e chegaram perfeitos. Ela ficou encantada! Super recomendo!" - João Silva ⭐⭐⭐⭐⭐
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Não Perca Esta Oportunidade!</h2>
+            <div class="urgency">
+                ⏰ Ofertas especiais para pedidos hoje!
+            </div>
+            <button class="cta-button" id="orderBtn">Fazer Meu Pedido Agora</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Morango do Amor. Feito com 💝 para adoçar seus momentos especiais.</p>
+    </footer>
+
+    <script>
+        function scrollToOrder() {
+            document.getElementById('orderBtn').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('orderBtn').addEventListener('click', function() {
+            window.location.href = 'https://w.app/98999848242';
+});
+
+        // Animação de entrada dos cards
+        const cards = document.querySelectorAll('.benefit-card, .technique-box');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        entry.target.style.transition = 'all 0.6s ease';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            });
+        });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
+</body>
+</html>
